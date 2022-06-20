@@ -65,11 +65,13 @@ parts:
   aml:
     plugin: nil
     source: https://github.com/any1/aml.git
+    source-tag: v0.2.1
     source-depth: 1
 
   neatvnc:
     plugin: nil
     source: https://github.com/any1/neatvnc.git
+    source-tag: v0.4.0
     source-depth: 1
     build-packages:
     - gnutls-dev
@@ -103,6 +105,7 @@ parts:
   wayvnc:
     after: [aml, neatvnc, xkbcommon]
     source: https://github.com/any1/wayvnc.git
+    source-tag: v0.4.1
     override-pull: |
       snapcraftctl pull
       snapcraftctl set-version "$( git describe --tags )"
